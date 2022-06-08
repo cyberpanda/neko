@@ -34,7 +34,7 @@ def encrypt_file():
 
 def decrypt_file():
     file = askopenfile(parent=root, mode='rb', title="Select file",
-                       filetypes=(("", "*.*"), ("all files", "*.*")))
+                       filetypes=(("", "*.meow"), ("all files", "*.*")))
     if file:
         key = Fernet.generate_key()
         with open("neko.key", "rb") as key_file:
